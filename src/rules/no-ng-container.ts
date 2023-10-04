@@ -2,7 +2,7 @@ import { ESLintUtils } from '@typescript-eslint/utils';
 import { getTemplateParserServices } from '@angular-eslint/utils';
 
 
-export const RULE_NAME = 'no-ng-content';
+export const RULE_NAME = 'no-ng-container';
 
 export const rule = ESLintUtils.RuleCreator((ruleName) => ruleName)({
     name: RULE_NAME,
@@ -25,7 +25,7 @@ export const rule = ESLintUtils.RuleCreator((ruleName) => ruleName)({
             },
         }],
         messages: {
-            default: 'Do not use ng-content'
+            default: 'Do not use ng-container'
         },
     },
     defaultOptions: [{

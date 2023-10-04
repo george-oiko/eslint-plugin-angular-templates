@@ -2,10 +2,14 @@
   "name": "eslint-plugin-angular-templates-ext",
   "version": "1.0.0",
   "description": "Eslint rules for Angular templates",
-  "main": "src/index.js",
+  "main": "./dist/index.js",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "test": "test",
-    "build": "tsc && xcopy src\\index.js dist\\ && xcopy package.json dist\\"
+    "build": "tsup src/index.ts --no-splitting --minify",
+    "buildx2": "tsc && xcopy src\\index.js dist\\ && xcopy package.json dist\\"
   },
   "dependencies": {
     "@angular-eslint/builder": "16.2.0",
@@ -25,5 +29,11 @@
     "eslint"
   ],
   "author": "George Oikonomopoulos",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/eslint": "^8.44.3",
+    "@types/estree": "^1.0.2",
+    "@types/node": "^20.8.2",
+    "tsup": "^7.2.0"
+  }
 }
