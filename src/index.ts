@@ -1,5 +1,7 @@
+import { rule } from './rules/no-ng-container'
+
 module.exports = {
     rules: {
-        ['no-ng-container']: null
+        ['no-ng-container']: rule
     },
 };

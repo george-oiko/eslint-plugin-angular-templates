@@ -31,9 +31,9 @@ export const rule = ESLintUtils.RuleCreator((ruleName) => ruleName)({
     defaultOptions: [{
         selectors: [],
     }],
-    create(context, [{ selectors }]) {
+    create(context) {
         return {
-            [`Content[name=ng-content]`](node: any) {
+            [`Content[name=ng-container]`](node: any) {
                 const parserServices = getTemplateParserServices(context as any);
                 const loc = parserServices.convertNodeSourceSpanToLoc(node.sourceSpan);
                 context.report({
@@ -47,7 +47,3 @@ export const rule = ESLintUtils.RuleCreator((ruleName) => ruleName)({
         };
     },
 });
-
-function stringArrayToRegex(value: string[]): RegExp {
-    return RegExp(`^(${value.join('|')})$`);
-}
