@@ -5,18 +5,18 @@
   "main": "src/index.js",
   "scripts": {
     "test": "test",
-    "build": "tsc"
+    "build": "tsc && xcopy src\\index.js dist\\ && xcopy package.json dist\\"
   },
   "dependencies": {
-    "@angular-eslint/utils": "^16.2.0",
-    "@typescript-eslint/eslint-plugin": "5.62.0",
-    "@typescript-eslint/parser": "5.62.0",
-    "@typescript-eslint/utils": "5.62.0",
     "@angular-eslint/builder": "16.2.0",
     "@angular-eslint/eslint-plugin": "16.2.0",
     "@angular-eslint/eslint-plugin-template": "16.2.0",
     "@angular-eslint/schematics": "16.2.0",
     "@angular-eslint/template-parser": "16.2.0",
+    "@angular-eslint/utils": "^16.2.0",
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "@typescript-eslint/parser": "5.62.0",
+    "@typescript-eslint/utils": "5.62.0",
     "eslint": "^8.50.0",
     "requireindex": "^1.2.0",
     "typescript": "~5.1.3"
